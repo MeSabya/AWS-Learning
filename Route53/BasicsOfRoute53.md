@@ -67,6 +67,15 @@ DNS records are instructions that are created in authoritative DNS servers or na
 **What is an NS record?**:
 An NS record or name server record identify which name servers are authoritative for a zone. DNS resolvers will query the servers listed in the NS records of a domain name for specific DNS records such as A, AAAA, MX, TXT. 
 
+## Elastic Load Balancer (ELB) and Route 53 in AWS
+
+Both Route53 and ELB are used to distribute the network traffic. These AWS services appear similar but there are minor differences between them.
+
+ELB distributes traffic among Multiple Availability Zone but not to multiple Regions. Route53 can distribute traffic among multiple Regions. In short, ELBs are intended to load balance across EC2 instances in a single region whereas DNS load-balancing (Route53) is intended to help balance traffic across regions.
+
+Both Route53 and ELB perform health check and route traffic to only healthy resources. Route53 weighted routing has health checks and removes unhealthy targets from its list. However, DNS is cached so unhealthy targets will still be in the visitors cache for some time. On the other hand, ELB is not cached and will remove unhealthy targets from the target group immediately.
+
+Use both Route53 and ELB: Route53 provides integration with ELB. You can use both Route53 and ELB in your AWS infrastructure. If you have AWS resources in multiple regions, you can use Route53 to balance the load among those regions. Inside the region, you can use ELB to load balance among the instances running in various Availability Zones.
 
 ## Summary 
 
