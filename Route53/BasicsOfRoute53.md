@@ -68,4 +68,10 @@ DNS records are instructions that are created in authoritative DNS servers or na
 An NS record or name server record identify which name servers are authoritative for a zone. DNS resolvers will query the servers listed in the NS records of a domain name for specific DNS records such as A, AAAA, MX, TXT. 
 
 
+## Summary 
 
+**Route53 can use basically:**
+
+Public domain names you own (or buy) or Private domain names that can be resolved by your instances in your VPCs.
+Route53 has many features such as Load balancing, Health checks, Routing policy like Simple, Failover, Geolocation, Latency, Weighted, Multi value.
+You pay $0.50 per month per hosted zone.
