@@ -1,0 +1,72 @@
+# Amazon EC2 
+
+Amazon Elastic Compute Cloud, EC2 is a web service from Amazon that provides re-sizable compute services in the cloud.
+
+They are re-sizable because you can quickly scale up or scale down the number of server instances you are using if your computing requirements change.
+
+## Types of EC2 Computing Instances:
+
+AWS EC2 offers 5 types of instances which are as follows:
+
+1. **General Instances**:
+
+    For applications that require a balance of performance and cost.
+    E.g email responding systems, where you need a prompt response as well as it should be cost-effective since it doesn’t require much processing.
+
+2. **Compute Instances**:
+
+    For applications that require a lot of processing from the CPU.
+    E.g analysis of data from a stream of data, like a Twitter stream
+
+3. **Memory Instances**:
+
+    For applications that are heavy in nature, therefore, require a lot of RAM.
+    E.g when your system needs a lot of applications running in the background i.e multitasking.
+
+4. **Storage Instances**:
+
+    For applications that are huge in size or have a data set that occupies a lot of space.
+    E.g When your application is of huge size.
+
+5. **GPU Instances**:
+
+    For applications that require some heavy graphics rendering.
+    E.g 3D modeling etc.
+    
+***Now, every instance type has a set of instances which are optimized for different workloads:***
+
+1. **Burstable Performance Instances**
+   T2 instances are burstable instances, meaning the CPU performs at a baseline, say 20% of its capability. When your application needs more than 20% of the performance of the CPU, the CPU enters into a burst mode giving the higher performance for a limited amount of time, therefore work happens faster.
+   
+   
+2. **EBS-Optimized Instances.**
+   C4, M4, and D2 instances are EBS optimized by default, EBS means Elastic Block Storage, which is a storage option provided by AWS in which the IOPS* rate is quite high. Therefore, when an EBS volume is attached to an optimized instance, single-digit millisecond latencies can be achieved.
+   *IOPS (Input/Output Operations Per Second, pronounced eye-ops) is a performance measurement used to characterize computer storage devices. 
+
+3. **Cluster Networking Instances:**
+
+   X1, M4, C4, C3, I2, G2 and D2 instances support cluster networking. Instances launched into a common placement group are put in a logical group that provides high-bandwidth, low latency between all the instances in the group.
+
+4. **Dedicated Instances:**
+
+   They are the instances that run on single-tenant hardware dedicated to a single customer.
+
+
+#### Let’s understand this through an example. Suppose in a company they have to follow the following tasks:
+
+**1.Analysis of customer’s data:**
+
+Customer’s website activity, etc. should all be monitored in real-time. There will be times when the traffic on the website will be minimum, therefore using a very powerful processor should not be considered, since it will become expensive for the company because it will not be used for every hour of the day. Hence, for this task, we might take t2 instances because they give Burstable CPU performance i.e when the traffic will be more the CPU performance will be increased accordingly to meet the requirements.
+
+**2. Our auto-response emailing system**
+
+It should be quick, therefore we would require systems, where the response time is as short as possible. This could be achieved by using EBS optimized instances, as they offer high IOPS and hence, low latencies.
+
+**3. The search engine on our website**
+
+It should be able to sort the keywords and return relevant results, therefore we might have 2 servers for this. One is the database and the other server for processing the keywords. Therefore, the communication between these servers should be at the maximum possible rate. To achieve this, we can put them in a placement group and for that, we have to use Cluster Networking Instances.
+
+**4. Some processes in every organization are highly confidential**
+
+Because these processes give us an edge over other companies, no matter how secure the servers, maybe, some policies are still made to be sure. Therefore, we might use Dedicated Instances for these kinds of processes.
+
