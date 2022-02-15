@@ -70,3 +70,13 @@ It should be able to sort the keywords and return relevant results, therefore we
 
 Because these processes give us an edge over other companies, no matter how secure the servers, maybe, some policies are still made to be sure. Therefore, we might use Dedicated Instances for these kinds of processes.
 
+## AWS EC2 Pricing
+
+There are basically 3 pricing options in EC2:
+
+        Spot Instances
+        On-Demand Instances
+        Reserved Instances
+
+
+
