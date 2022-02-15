@@ -1,2 +1,0 @@
-# Networking with EC2
-
