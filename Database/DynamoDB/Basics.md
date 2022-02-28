@@ -104,3 +104,31 @@ With this base table key schema, it can answer queries to retrieve all the artic
 With a local secondary index that has UserId as its partition key and DateCreated as its sort key, you can retrieve a user’s articles sorted by date created.
 
        |UserId(Partition Key) | DateCreated(Sort Key) | ArticleName | Data|
+       
+       
+## Summary 
+
+![image](https://user-images.githubusercontent.com/33947539/155927591-9a94853a-8cd0-4534-9b18-bcd355708f77.png)
+
+- Every DynamoDB Table is divided in to one or more Partitions.
+- Each Partition contains a subset of the table data, in addition to any Local Secondary Indexes* created on that Partition data
+- Global Secondary Indexes are stored and maintained separately from the Partitions and they index the entire table (not specific to any one Partition)
+
+*DynamoDB internals are not visible to public. So, the internal partition structure shown above is only an illustration intended to explain the observed behaviour*
+
+![image](https://user-images.githubusercontent.com/33947539/155927659-0a9f0091-b24e-4d42-af46-2f848e54442e.png)
+
+**As per the above image:**
+
+- Each Table consists of a number of Items
+- Each Item can contain one or more Attributes
+- Every Item must contain at least one Attribute, which will be its Partition Key
+- For every CRUD operation on the table, the operation must specify the Item’s Partition Key
+- In addition to the Partition Key, a Table definition can assign any Attribute as its Sort Key
+- Read operations on the Table can specify Sort Key, for more advanced queries (“contains”, “begins with” etc.,)
+- A group of Items in table is called an Item Collection
+
+
+
+
+
