@@ -38,12 +38,15 @@ c. Secrets Manager
 
 ## Networking and Content delivery
 a. VPC ⭐
+   1. [what-is-elastic-network-interface](https://github.com/MeSabya/AWS-Learning/blob/main/Network/5.%20Elastic%20Network%20Interface.md#what-is-elastic-network-interface)
 
 b. API gateway ⭐
 
 c. Route53 ⭐
 
 d. Cloudfront 
+
+
 
 ## Event driving and streaming technology
 a. SNS/SQS  ⭐
