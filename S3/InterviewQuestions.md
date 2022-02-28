@@ -71,3 +71,26 @@ INCORRECT: “Use the geoproximity feature of Amazon Route 53.” is incorrect a
 
 CORRECT: “Use Amazon CloudFront with the S3 bucket as its origin.” is the correct answer.
 
+## An application receives images uploaded by customers and stores them on Amazon S3. An AWS Lambda function then processes the images to add graphical elements. The processed images need to be available for users to download for 30 days, after which they can be deleted. Processed images can be easily recreated from original images. The original images need to be immediately available for 30 days in addition to being accessible within 24 hours for another 90 days.Which combination of Amazon S3 storage classes is most cost-effective for the original and processed images? (Select TWO)
+
+1. Store the original images in STANDARD for 30 days, transition to GLACIER for 90 days, and then expire the data.
+2. Store the original images in STANDARD_IA for 30 days, and then transition to DEEP_ARCHIVE.
+3. Store the processed images in ONEZONE_IA, and then expire the data after 30 days.
+4. Store the processed images in STANDARD, and then transition to GLACIER after 30 days.
+5. Store the original images in STANDARD for 30 days, transition to DEEP_ARCHIVE for 90 days, and then expire the data.
+
+Explanation: The key requirements for the original images are that they must be immediately available for 30 days (STANDARD), available within 24 hours for 90 days (GLACIER), after which they will not be needed (expire them).
+
+The key requirements for the processed images are that they must be immediately available for 30 days (ONEZONE_IA as they can be recreated from the originals), after which they are not needed (expire them).
+
+CORRECT: “Store the original images in STANDARD for 30 days, transition to GLACIER for 90 days, and then expire the data.” is a correct answer.
+
+INCORRECT: “Store the original images in STANDARD_IA for 30 days and then transition to DEEP_ARCHIVE.” is incorrect. DEEP_ARCHIVE has a minimum storage duration of 180 days.
+
+CORRECT: “Store the processed images in ONEZONE_IA, and then expire the data after 30 days.” is also a correct answer.
+
+INCORRECT: “Store the processed images in STANDARD, and then transition to GLACIER after 30 days.” is incorrect. There is no need to transition the processed images to GLACIER as they are not needed after 30 days and they can be recreated from the originals if needed.
+
+INCORRECT: “Store the original images in STANDARD for 30 days, transition to DEEP_ARCHIVE for 90 days, then expire the data.” is incorrect. DEEP_ARCHIVE has a minimum storage duration of 180 days.
+
+
