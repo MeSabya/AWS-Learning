@@ -38,3 +38,35 @@ EC2 instances support two types for block level storage:
 - Not all instance types in EC2 service support Instance Storage Volumes.
 - Instance Store Volumes can only be specified for an instance during its launch. Users cannot add new storage volumes as a later update to the same EC2.
 
+## Key points for Instance store backed Instance
+1. Boot time is slower then EBS backed volumes and usually less then 5 min
+2. Instance store backed Instances can be of maximum 10GiB volume size
+3. Instance store volume can be attached as additional volumes only when the instance is being launched and cannot be attached once the Instance is up and running
+4. Instance store backed Instances cannot be stopped, as when stopped and started AWS does not guarantee the instance would be launched in the same host and hence the data is lost
+5. Instance store backed Instances cannot be upgraded
+6. Data on Instance store volume is LOST in following scenarios:
+
+          1. Underlying disk drive fails
+          2. Instance stops
+          3. Instance terminates
+          4. Instance hibernates
+          Therefore, do not rely on instance store for valuable, long-term data.
+
+## Key points for EBS backed Instance
+1. Boot time is very fast usually less then a min.
+2. EBS backed Instances can be of maximum 16TiB volume size depending upon the OS.
+3. EBS volume can be attached as additional volumes when the Instance is launched and even when the Instance is up and running.
+4. When EBS-backed instance is in a stopped state, various instance– and volume-related tasks can be done for e.g. you can modify the properties of the instance, you can change the size of your instance or update the kernel it is using, or you can attach your root volume to a different running instance for debugging or any other purpose.
+5. EBS volumes are AZ scoped and tied to a single AZ in which created.
+6. EBS volumes are automatically replicated within that zone to prevent data loss due to failure of any single hardware component.
+7. EBS backed Instances can be upgraded for instance type, Kernel, RAM disk and user data.
+8. Data on EBS volume is NOT LOST in following scenarios:
+
+          1. Reboot on the Instance.
+          2. Stopping an EBS-backed instance.
+          3. Termination of the Instance for the additional EBS volumes. Additional EBS volumes are detached with their data intact.
+
+9. Data on the EBS volume is LOST:
+
+          1. For EBS Root volume, if Delete on termination flag is enabled (enabled, by default).
+          2. For attached EBS volumes, if the Delete on termination flag is enabled (disabled, by default).
