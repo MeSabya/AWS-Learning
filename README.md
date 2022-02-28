@@ -1,24 +1,24 @@
 # AWS-Learning
 
 ## Computing
-a. EC2(In-depth)
+a. EC2(In-depth) ⭐
 
 b. ECS
 
-c. Lambda(In-depth)
+c. Lambda(In-depth) ⭐
 
 d. Elastic Beanstalk
 
 ## Storage
-a. S3(In-depth)
+a. S3(In-depth)  ⭐
 
-b. DynamoDB
+b. DynamoDB(In depth)  ⭐
 
 c. RDS
 
 d. Elastic cache
 
-e. EBS(In-depth)
+e. EBS
 
 f. EFS
 
@@ -30,30 +30,28 @@ b. Codedeploy
 c. Deployment techniques and concepts (Bluegreen, rolling, all at once, etc.)
 
 ## Security
-a. IAM
+a. IAM ⭐
 
 b. KMS
 
 c. Secrets Manager
 
 ## Networking and Content delivery
-a. VPC
+a. VPC ⭐
 
-b. API gateway
+b. API gateway ⭐
 
-c. Route53
+c. Route53 ⭐
 
-d. Cloudfront
+d. Cloudfront 
 
 ## Event driving and streaming technology
-a. SNS/SQS
+a. SNS/SQS  ⭐
 
 b. Kinesis
 
 ## Monitoring
-a. XRay
-
-b. Cloudwatch
+Cloudwatch  ⭐
 
 
 ## The AWS Fundamentals: 
@@ -89,5 +87,6 @@ KMS, Encryption SDK, SSM Parameter Store, IAM Policies
 
 ## Material
 
-https://www.udemy.com/course/aws-developer-associate-practice-exams/ 
-https://www.udemy.com/course/aws-certified-developer-associate-practice-tests-dva-c01/
+- https://www.udemy.com/course/aws-developer-associate-practice-exams/ 
+
+- https://www.udemy.com/course/aws-certified-developer-associate-practice-tests-dva-c01/
