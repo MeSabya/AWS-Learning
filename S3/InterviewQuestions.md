@@ -46,3 +46,28 @@ INCORRECT: “Store the file in an EBS volume, which can then be accessed by ano
 CORRECT: “Upload files into an S3 bucket, and use the Amazon S3 event notification to invoke a Lambda function to extract the metadata.” is the correct answer.
 
 INCORRECT: “Place the files in an SQS queue, and use a fleet of EC2 instances to extract the metadata.” is incorrect. SQS queues have a maximum message size of 256 KB. You can use the extended client library for Java to use pointers to a payload on S3, but the maximum payload size is 2 GB.
+
+## An organization wants to share regular updates about their charitable work using static web pages. The pages are expected to generate a large number of views from around the world. The files are stored in an Amazon S3 bucket. Which action should the solutions architect take to accomplish this?
+
+1. Generate pre-signed URLs for the files.
+2. Use Cross-Region Replication to all Regions.
+3. Use the geoproximity feature of Amazon Route 53.
+4. Use Amazon CloudFront with the S3 bucket as its origin.
+
+**Explanation:** 
+
+Using Amazon CloudFront to cache the files in edge locations around the world will improve the performance of the webpages.
+
+To serve a static website hosted on Amazon S3, you can deploy a CloudFront distribution using one of these configurations:
+
+Using a REST API endpoint as the origin with access restricted by an origin access identity (OAI)
+Using a website endpoint as the origin with anonymous (public) access allowed
+Using a website endpoint as the origin with access restricted by a Referer header
+INCORRECT: “Generate presigned URLs for the files.” is incorrect as this is used to restrict access, which is not a requirement.
+
+INCORRECT: “Use Cross-Region Replication to all Regions.” is incorrect as this does not provide a mechanism for directing users to the closest copy of the static web pages.
+
+INCORRECT: “Use the geoproximity feature of Amazon Route 53.” is incorrect as this does not include a solution for having multiple copies of the data in different geographic locations.
+
+CORRECT: “Use Amazon CloudFront with the S3 bucket as its origin.” is the correct answer.
+
