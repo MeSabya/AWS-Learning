@@ -93,4 +93,22 @@ INCORRECT: “Store the processed images in STANDARD, and then transition to GLA
 
 INCORRECT: “Store the original images in STANDARD for 30 days, transition to DEEP_ARCHIVE for 90 days, then expire the data.” is incorrect. DEEP_ARCHIVE has a minimum storage duration of 180 days.
 
+## A team is planning to run analytics jobs on log files each day and requires a storage solution. The size and number of logs are unknown, and data will persist for 24 hours only. Which of the following is the most cost-effective solution?
+
+        Amazon S3 Glacier Deep Archive
+        Amazon S3 Standard
+        Amazon S3 Intelligent-Tiering
+        Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA)
+
+**Explanation:**
+
+S3 standard is the best choice in this scenario for a short term storage solution. In this case, the size and number of logs are unknown, and it would be difficult to fully assess the access patterns at this stage. Therefore, using S3 standard is best as it is cost-effective, provides immediate access, and there are no retrieval fees or minimum capacity charge per object.
+
+INCORRECT: “Amazon S3 Glacier Deep Archive” is incorrect as this storage class is used for archiving data. There are retrieval fees and it takes hours to retrieve data from an archive.
+
+CORRECT: “Amazon S3 Standard” is the correct answer.
+
+INCORRECT: “Amazon S3 Intelligent-Tiering” is incorrect as there is an additional fee for using this service, and for a short-term requirement, it may not be beneficial.
+
+INCORRECT: “Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA)” is incorrect as this storage class has a minimum capacity charge per object (128 KB) and a per GB retrieval fee.
 
