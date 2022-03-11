@@ -17,3 +17,21 @@ INCORRECT: “A relational data store such as Amazon RDS” is incorrect. Relati
 
 CORRECT: “A key/value store such as ElastiCache Redis” is the correct answer.
 
+
+![image](https://user-images.githubusercontent.com/33947539/157815494-60edfe6d-8cb8-4c20-958d-fbdb731cc5d7.png)
+
+**Explanation:**
+
+High availability can be enabled for this architecture quite simply by modifying the existing Auto Scaling group to use multiple Availability Zones. The ASG will automatically balance the load, so you don’t actually need to specify the instances per AZ.
+
+The architecture for the web tier will look like this:
+![image](https://user-images.githubusercontent.com/33947539/157815595-401b17b8-b457-4395-b26f-521c5e74e8a0.png)
+
+INCORRECT: “Create an Auto Scaling group that uses four instances across each of the two regions.” is incorrect as EC2 Auto Scaling does not support multiple regions.
+
+CORRECT: “Modify the Auto Scaling group to use four instances across each of the two Availability Zones.” is the correct answer.
+
+INCORRECT: “Create an Auto Scaling template that can be used to quickly create more instances in another region.” is incorrect as EC2 Auto Scaling does not support multiple regions.
+
+INCORRECT: “Create an Auto Scaling group that uses four instances across each of the two subnets.” is incorrect as the subnets could be in the same AZ.
+
