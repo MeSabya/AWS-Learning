@@ -28,3 +28,15 @@ CORRECT: “Create an Application Load Balancer with Auto Scaling groups across 
 
 INCORRECT: “Create an Application Load Balancer with Auto Scaling groups across multiple Availability Zones. Store data using Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA).” is incorrect as there are data retrieval charges associated with this S3 tier. It is not a suitable storage tier for application files.
 
+![image](https://user-images.githubusercontent.com/33947539/157836082-d960e986-d8bc-450c-a74a-a0d14569fd62.png)
+
+Explanation: Although this sounds like a good use case for scheduled actions, both answers using scheduled actions will have 20 instances running regardless of actual demand. In order to be more cost-effective, the better option would be to use a target tracking action that triggers at a lower CPU threshold. With this solution, the scaling will occur before the CPU utilization gets to a point where performance is affected. This will result in resolving performance issues whilst minimizing costs. Using a reduced cooldown period will also more quickly terminate unneeded instances, further reducing costs.
+
+INCORRECT: “Implement a scheduled action that sets the desired capacity to 20 shortly before the office opens.” is incorrect as this is not the most cost-effective option. Note that you can choose min, max, or desired for a scheduled action.
+
+INCORRECT: “Implement a step scaling action triggered at a lower CPU threshold, and decrease the cooldown period.” is incorrect as AWS recommends that you use target tracking in place of step scaling for most use cases.
+
+CORRECT: “Implement a target tracking action triggered at a lower CPU threshold, and decrease the cooldown period.” is the correct answer.
+
+INCORRECT: “Implement a scheduled action that sets the minimum and maximum capacity to 20 shortly before the office opens.” is incorrect as this is not the most cost-effective option. Note that you can choose min, max, or desired for a scheduled action.
+
