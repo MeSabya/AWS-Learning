@@ -16,3 +16,15 @@ INCORRECT: “Provision an IPSec VPN connection between your on-premises locatio
 
 INCORRECT: “This cannot be done; ELBs are an AWS service and can only distribute traffic within the AWS cloud.” is incorrect as this statement is false.
 
+![image](https://user-images.githubusercontent.com/33947539/157821705-b34941ef-e091-42db-8acc-7441c308aa73.png)
+
+Explanation: To increase the resiliency of the application, the solutions architect can use Auto Scaling groups to launch and terminate instances across multiple Availability Zones based on demand. An Application Load Balancer (ALB) can be used to direct traffic to the web application running on the EC2 instances. Lastly, the Amazon Elastic File System (EFS) can assist with increasing the resiliency of the application by providing a shared file system that can be mounted by multiple EC2 instances from multiple Availability Zones.
+
+INCORRECT: “Launch the application on EC2 instances in each Availability Zone. Attach EBS volumes to each EC2 instance.” is incorrect as the EBS volumes are single points of failure that are not shared with other instances.
+
+INCORRECT: “Create an Application Load Balancer with Auto Scaling groups across multiple Availability Zones. Mount an instance store on each EC2 instance.” is incorrect as instance stores are ephemeral data stores, which means data is lost when powered down. Also, instance stores cannot be shared between instances.
+
+CORRECT: “Create an Application Load Balancer with Auto Scaling groups across multiple Availability Zones. Store data on Amazon EFS, and mount a target on each instance.” is the correct answer.
+
+INCORRECT: “Create an Application Load Balancer with Auto Scaling groups across multiple Availability Zones. Store data using Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA).” is incorrect as there are data retrieval charges associated with this S3 tier. It is not a suitable storage tier for application files.
+
