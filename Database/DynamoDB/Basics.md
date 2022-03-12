@@ -106,6 +106,34 @@ With a local secondary index that has UserId as its partition key and DateCreate
        |UserId(Partition Key) | DateCreated(Sort Key) | ArticleName | Data|
        
 ![image](https://user-images.githubusercontent.com/33947539/158004976-8c7880ec-c9d0-4ea7-98fb-d9a0b125b327.png)
+
+### Summary on DynamoDB indexing: 🔯 Important
+Every item in Dynamo must have a unique primary key. The primary key is the base table index. A primary key must have a partition key and can optionally have a range key (also called a sort key). Within a partition, items are ordered by range key. Accessing items using a partition key is fast.
+
+**Secondary indexes allow you to query the table using an alternative key**. 
+
+👉 **A Local Secondary Index (LSI)** has the same partition key as the primary key (index), but a different range key. The way to think about an LSI is that its the same data 
+    as the primary index (key), just ordered by a different attribute.
+
+👉 A **Global Secondary Index (GSI)** has a different partition key to the primary key and is therefore a different set of data.
+
+One of the important differences between an LSI and GSI is that an LSI takes its throughput capacity from the base table, where as you have purchase GSI throughput capacity separately. Put another way, an LSI costs you nothing and a GSI incurs extra cost over your base table.
+
+👉 **Lets have a look at the Music table example. Lets say the base table has this schema:**
+
+Artist: (Primary Key) Partition Key
+SongTitle: (Primary Key) Range Key
+AlbumTitle:
+DateOfRelease:
+This table is a list of songs. I can access all the songs for an artist really efficiently (i.e. query by Artist using the partition key). When I do this query the songs will be ordered by SongTitle. I can also access songs by Artist and SongTitle very efficiently using the unique primary key.
+
+Now lets say I want to get all songs by an Artist but ordered by DateOfRelease. In the current schema I would need to get all the songs and then order them in my application. A good alternative would be to create a new index, with a partition key of Artist and a range key DateOfRelease. This will be a LSI because the partition key of the index (Artist) is the same as the partition key of the primary key. I do not need to purchase additional throughput capacity as this index will provision itself from the base table capacity.
+
+Now lets say I want to access the songs by AlbumTitle, ordered by SongTitle, i.e. create lists of Albums. To do this efficiently I create a new index with partition key AlbumTitle and range key SongTitle. This is a GSI because the partition key is different to the primary key. This GSI must be provisioned separately to the base table and therefore costs extra.
+
+In answer to your question, GenreAlbumTitle is a GSI because it has a different partition key to Music.
+
+
        
 ## Summary 
 
