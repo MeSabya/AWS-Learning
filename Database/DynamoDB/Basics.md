@@ -105,6 +105,7 @@ With a local secondary index that has UserId as its partition key and DateCreate
 
        |UserId(Partition Key) | DateCreated(Sort Key) | ArticleName | Data|
        
+![image](https://user-images.githubusercontent.com/33947539/158004976-8c7880ec-c9d0-4ea7-98fb-d9a0b125b327.png)
        
 ## Summary 
 
