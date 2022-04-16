@@ -1,5 +1,6 @@
 # RDS Security — Encryption
 
+##  Encryption of Data In-Rest
 - Amazon RDS encrypts your databases using keys you manage with the AWS Key Management Service (KMS).
 - Data stored at rest in the underlying storage is encrypted, as are its automated backups, read replicas, and snapshots.
 - RDS encryption uses the industry standard AES-256 encryption algorithm to encrypt your data on the server that hosts your RDS instance.
@@ -43,7 +44,7 @@ You can then restore a DB instance from the encrypted snapshot, and thus you hav
 👉 The source snapshot remains encrypted throughout the copy process. AWS Key Management Service uses envelope encryption to protect data during the copy process.
 
 
-## How to encrypt
+### How to encrypt
 So, if you already have an unencrypted database you can encrypt it in the next way:
 
 - Stop writes on the RDS instance
@@ -53,5 +54,11 @@ So, if you already have an unencrypted database you can encrypt it in the next w
 - Select the new encrypted snapshot
 - Restore encrypted snapshot
 
+## Network and IAM
+
+![image](https://user-images.githubusercontent.com/33947539/163667493-3a24b3ef-7276-49a7-83c7-752205e981a6.png)
+
+
 ## Reference :
 [How to Secure RDS on AWS](https://medium.com/swlh/how-to-secure-rds-on-aws-b46b15b7c7c6)
+
