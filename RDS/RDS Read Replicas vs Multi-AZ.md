@@ -30,6 +30,7 @@ A read replica is billed as a standard DB Instance and at the same rates
 👉 **You are not charged for the data transfer incurred in replicating data between your source DB instance and read replica within the same AWS Region but need to change the data 
     transfer charge for cross-region.**
 
+![image](https://user-images.githubusercontent.com/33947539/163660034-7c77309e-ff1e-4119-a163-3f1d90050521.png)
 
 # What is Amazon RDS Multi-AZ (Disaster Recovery)?
 
