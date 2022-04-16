@@ -2,12 +2,20 @@
 
 # What is Amazon RDS Read Replicas?
 
+- Read Replicas helps in decreasing load on the primary DB by serving read-only traffic.
+- You can create Read Replicas within AZ, Cross-AZ or Cross-Region.
+- Read Replica can be manually promoted as a standalone database instance.
+- Read Replicas support Multi-AZ deployments.
+- You can use Read Replicas to take logical backups, if you want to store the backups externally to RDS.
+- You can have Read Replicas of Read Replicas.
+- Read Replica helps to maintain a copy of databases in a different region for disaster recovery.
+- You can have up to five Read Replicas per master, each with own DNS endpoint. Unlike a Multi-AZ standby replica, you can connect to each Read Replica and use them for read scaling.
 - Amazon enables you to create one or more read-only copies of your database instance.
 - Replication can be within the same AWS Region or in a different AWS Region.
-- Read replicas make it easy to take advantage of replication functionality to scale out beyond the capacity of a single DB instance for read-only database workloads.'
-- **You can have up to five Read Replicas per master, each with its own DNS endpoint.**
 - Read replicas are implemented using asynchronous replication, so reads are eventually consistent.
 - Applications must update the connection string to leverage read replicas.
+
+![image](https://user-images.githubusercontent.com/33947539/163660156-84dcfca5-418e-46aa-a028-2e52d424ea96.png)
 
 ## RDS Read Replicas — Use Cases
 
@@ -41,6 +49,8 @@ A read replica is billed as a standard DB Instance and at the same rates
 - One DNS name — Endpoint of DB instance remains the same after a failover, the application can resume database operations without manual intervention.
 - Not used for scaling
 - ***Note: The Read Replicas can be set up as Multi-AZ for Disaster Recovery (DR)***
+
+![image](https://user-images.githubusercontent.com/33947539/163660118-1154a403-d8b7-4296-9d12-569544fe04ee.png)
 
 ## RDS Multi-AZ — Failover Conditions
 
