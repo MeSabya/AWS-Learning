@@ -134,6 +134,34 @@ Now lets say I want to access the songs by AlbumTitle, ordered by SongTitle, i.e
 In answer to your question, GenreAlbumTitle is a GSI because it has a different partition key to Music.
 
 
+## How you manage tables capacity ?
+
+👉 Provision mode 
+👉 On demand mode
+
+***Provision Mode:***
+
+In this mode table must provisioned read and write capacity units:
+
+**RCU Read Capacity Units**: Throughput for reads
+
+**Write Capacity Units**: Throughput for writes
+
+Throughput can be exceeded temporarily using "Burst Capacity".
+
+### WCU : 
+
+It represents one write per second for an item upto 1KB in size. If the items are larger than 1KB more WCUs are going to be consumed.
+
+![image](https://user-images.githubusercontent.com/33947539/163684601-bb69269e-75b0-45ed-8d24-8d99a49e5c4c.png)
+
+### RCU:
+
+![image](https://user-images.githubusercontent.com/33947539/163684651-c04ac92f-6eab-4636-956f-bdb6af040d98.png)
+
+
+
+
        
 ## Summary 
 
