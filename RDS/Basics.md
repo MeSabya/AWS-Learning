@@ -32,3 +32,11 @@ Amazon RDS currently supports below databases:
 - PostgreSQL
 
 ![image](https://user-images.githubusercontent.com/33947539/163680189-ef16369a-b737-417b-a410-699e24f06787.png)
+
+![image](https://user-images.githubusercontent.com/33947539/163680235-2fadc587-7f8f-4d10-b65d-8aff5dce6181.png)
+
+![image](https://user-images.githubusercontent.com/33947539/163680262-5978f9d8-32f2-4886-8913-d8a4cb1ca2d2.png)
+
+![image](https://user-images.githubusercontent.com/33947539/163680424-2b02904b-79a3-488f-8585-4bc003b8a922.png)
+
+![image](https://user-images.githubusercontent.com/33947539/163680455-20d939ab-e655-4798-99e8-c84199950255.png)
