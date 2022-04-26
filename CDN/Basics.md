@@ -9,6 +9,13 @@ A better way to solve the web latency issues for very remote servers in the Inte
 It consists of a global network of Edge Locations, that are distributed across the globe. It is complaint with both PCI DSS (except storing credit card information in the cache) and HIPAA standards.
 To deliver content to end users with lower latency, Amazon CloudFront uses a global network of 225+ Points of Presence (215+ Edge locations and 13 regional mid-tier caches) in 90 cities across 47 countries. (Updated — May 2021, Source: AWS Documentation) 
 
+## What files should be served from a CDN
+
+- Images
+- Javascript files
+- CSS files
+- Small static files
+
 ## CloudFront Components
 There are multiple components in AWS CloudFront:
 
@@ -107,3 +114,5 @@ There are two options available for geo-restriction (geo-blocking):
 
 👉 Use a 3rd party geo-location service (use it for restricting access to a subset of the files in a distribution and for finer granularity at the country level).
 
+## Reference 
+https://kumargaurav1247.medium.com/aws-cdn-content-delivery-network-cloudfront-with-hands-on-e074b0e77166#:~:text=Amazon%20S3%20is%20designed%20for,close%20to%20users%20as%20possible.
