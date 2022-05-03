@@ -18,3 +18,4 @@ INCORRECT: “Amazon EFS” is incorrect as EFS is a file system that is accesse
 
 INCORRECT: “Amazon S3” is incorrect as S3 is an object-based storage system, not a block-based storage system.
 
+![image](https://user-images.githubusercontent.com/33947539/166435561-2f1a2bb4-655c-4e60-a7e5-6e402634212f.png)
