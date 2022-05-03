@@ -9,6 +9,7 @@
 3. To attach the multi-attach enabled EBS to multiple instances, the EBS volume should reside in the same availability zone as the instances.
 4. You can attach up to 16 Nitro-based instances in the same Availability Zone.   
 5. Multi-Attach enabled volumes can't be created as boot volumes.
+6. Only for io1 and io2 family.
 
 
    
