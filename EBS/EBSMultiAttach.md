@@ -8,4 +8,7 @@
    and NTFSas these file systems are not designed for simultaneous read/write operations from multiple nodes. It supports only cluster-aware File systems like GFS2 & OCFS2.
 3. To attach the multi-attach enabled EBS to multiple instances, the EBS volume should reside in the same availability zone as the instances.
 4. You can attach up to 16 Nitro-based instances in the same Availability Zone.   
+5. Multi-Attach enabled volumes can't be created as boot volumes.
+
+
    
