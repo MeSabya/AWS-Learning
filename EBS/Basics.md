@@ -53,5 +53,9 @@ Create a volume from the snapshot in the AZ of your choice.
 - Data at rest is encrypted inside the volume
 - All the data in flight moving between the instance and the volume is encrypted
 
-
+### How to encrypt an uncrypted volume 
+- Create a snapshot of the unencrypted volume.
+- Then encrypt the snapshot.
+- create a new EBS volume from this snapshot., this volume must be encrypted.
+- Now you can attach this to the original instance.
 
