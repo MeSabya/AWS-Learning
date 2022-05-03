@@ -30,11 +30,6 @@ You can specify the failover priority for Aurora Replicas. Aurora Replicas can a
 - Can handle the loss of up to two copies of data without affecting DB write availability and up to three copies without affecting read availability.
 - Aurora’s database storage is separate from the instances. In Aurora, data has 6 copies (as 10GB chunks distributed) to three Availability Zones. 
   Hence, even if you have only one Aurora instance, your data will still have 6 copies.
-- Aurora Serverless
-  Aurora Serverless lets you run Aurora without having to guess how many compute nodes you need. 
-  It automatically starts and stops nodes to match the needs of your application. 
-  It scales up to meet a spike in demand and scales down when things are quiet. 
-  The data remains in the shared storage volume, independent of any scaling.
 
 ![image](https://user-images.githubusercontent.com/33947539/166447931-d6b8208a-5790-446e-bfaf-153f27e3680e.png)
 
