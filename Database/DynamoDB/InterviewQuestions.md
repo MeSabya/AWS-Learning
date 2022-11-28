@@ -1,3 +1,16 @@
+## What is the difference between partition key and sort key in amazon dynamodb?
+
+The partition key is used for partitioning the data. Data with the same partition key is stored together, which allows you to query data with the same partition key in 1 query.
+
+The (optional) sort key determines the order of how data with the same partition key is stored. Using a clever sort key allows you to query many items in 1 query.
+
+An example: let's say I'm storing logging data for several applications. My partition key could be the Application Name, and the sort key the timestamp of the log. This allows me to query all logs of a particular application of the last hour in 1 query, using the BEGINS WITH operator, or even all the logs of last Wednesday for an application, by using the BETWEEN operator.
+
+The partition key + the optional sort key form the primary key of the table, so they must be unique. Additionally, they are immutable.
+
+The choice of your partition key and sort key should be based on your most important access pattern. If you have other access patterns, you can accommodate for them by using Global Secondary Indexes, but this comes with a cost.
+
+
 ## You are building an application that will collect information about user behavior. The application will rapidly ingest large amounts of dynamic data and requires very low latency. The database must be scalable without incurring downtime. Which database would you recommend in this scenario?
 
               RDS with MySQL
