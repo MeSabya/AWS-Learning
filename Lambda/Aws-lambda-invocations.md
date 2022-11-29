@@ -38,7 +38,29 @@ Basically we can invoke a lambda function asynchronously, after that Lambda send
 S3 + Lambda + DynamoDB
 A common scenario for Asynchronous invocation is the S3 / SNS + Lambda + DynamoDB. You can see in the image of S3 / SNS + Lambda + DynamoDB.
 
+Here is a list of services that invoke Lambda functions asynchronously:
 
+S3
+EventBridge
+SNS
+SES
+CloudFormation
+CloudWatch Logs
+CloudWatch Events
+CodeCommit
+Pool Based Invokes
+
+### Lambda Event Source Mapping with Polling Invocation
+Pool-Based invocation model allows us to integrate with AWS Stream and Queue based services. These services don’t invoke Lambda function directly. Lambda will poll from the AWS SQS or Kinesis streams, retrieve records, and invoke functions.
+AWS Lambda Event Source Mapping manages the poller and performs Synchronous invokes of our function.
+
+SQS + Lambda
+A common scenario for Event Source Mapping with Polling Invocation is the SQS + Lambda. You can see in the image of SQS + Lambda
+
+👉 ***Please follow the below reference as images are not captured here.***
+
+## Reference:
+https://medium.com/aws-serverless-microservices-with-patterns-best/aws-lambda-invocation-types-e279ef136347
 
 
 
