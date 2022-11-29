@@ -62,5 +62,6 @@ A common scenario for Event Source Mapping with Polling Invocation is the SQS + 
 ## Reference:
 https://medium.com/aws-serverless-microservices-with-patterns-best/aws-lambda-invocation-types-e279ef136347
 
+https://awstip.com/lambda-s3-event-notification-s3-lambda-sns-447093c42c75
 
 
