@@ -1,3 +1,9 @@
+## A retail organization is deploying a new application that will read and write data to a database. The company wants to deploy the application in three different AWS Regions in an active-active configuration. The databases need to replicate to keep information in sync.Which solution best meets these requirements?
+
+**Explanation:**
+Amazon DynamoDB global tables provide a fully managed solution for deploying a multi-region, multi-master database. This is the only solution from the options given above that provides an active-active configuration where reads and writes can take place in multiple regions with full bi-directional synchronization.
+Amazon DynamoDB global tables provide a fully managed solution for deploying a multi-region, multi-master database. This is the only solution from the options given above that provides an active-active configuration where reads and writes can take place in multiple regions with full bi-directional synchronization.
+
 ## What is the difference between partition key and sort key in amazon dynamodb?
 
 The partition key is used for partitioning the data. Data with the same partition key is stored together, which allows you to query data with the same partition key in 1 query.
