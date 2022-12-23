@@ -1,3 +1,11 @@
+## You are a solutions architect at Digital Cloud Training. One of your clients runs an application that writes data to a DynamoDB table. The client has asked you how they can implement a function that runs code in response to item level changes that take place in the DynamoDB table. What would you suggest to the client?
+
+Explanation: DynamoDB Streams help you keep or provide a list of item level changes that have taken place in the last 24 hours. Amazon DynamoDB is integrated with AWS Lambda so that you can create triggers, which are pieces of code that automatically respond to events in DynamoDB Streams.
+
+If you enable DynamoDB Streams on a table, you can associate the stream ARN with a Lambda function that you write. Immediately after an item in the table is modified, a new record appears in the table’s stream. AWS Lambda polls the stream and invokes your Lambda function synchronously when it detects new stream records.
+
+An event source mapping identifies a poll-based event source for a Lambda function. It can be either an Amazon Kinesis or DynamoDB stream. Event sources maintain the mapping configuration except for stream-based services (e.g., DynamoDB, Kinesis), for which the configuration is made on the Lambda side, and Lambda performs the polling.
+
 ## A retail organization is deploying a new application that will read and write data to a database. The company wants to deploy the application in three different AWS Regions in an active-active configuration. The databases need to replicate to keep information in sync.Which solution best meets these requirements?
 
 **Explanation:**
