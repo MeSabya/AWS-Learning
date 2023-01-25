@@ -25,4 +25,7 @@ https://aws.amazon.com/blogs/database/dynamodb-streams-use-cases-and-design-patt
 
 #### 9. Leadershipboard using AWS, Redis.
 https://medium.com/@nvedansh/design-a-realtime-gaming-leaderboard-df0dcb9183ae
+https://aws.amazon.com/blogs/database/building-a-real-time-gaming-leaderboard-with-amazon-elasticache-for-redis/
+
+
 
