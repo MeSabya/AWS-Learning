@@ -1,91 +1,59 @@
 # AWS-Learning
+## AWS services and features
 
-## Computing
-a. EC2(In-depth) ⭐
+### Analytics:
+	 Amazon Elasticsearch Service (Amazon ES)
+	 Amazon Kinesis
 
-b. ECS
+### Application Integration:
+	 Amazon EventBridge (Amazon CloudWatch Events)
+	 Amazon Simple Notification Service (Amazon SNS)
+	 Amazon Simple Queue Service (Amazon SQS)
+	 AWS Step Functions
 
-c. Lambda(In-depth) ⭐
+### Compute:
+	 Amazon EC2
+	 AWS Elastic Beanstalk
+	 AWS Lambda
 
-d. Elastic Beanstalk
+### Containers:
+	 Amazon Elastic Container Registry (Amazon ECR)
+	 Amazon Elastic Container Service (Amazon ECS)
+	 Amazon Elastic Kubernetes Services (Amazon EKS)
 
-## Storage
-a. S3(In-depth)  ⭐
+### Database:
+	 Amazon DynamoDB
+	 Amazon ElastiCache
+	 Amazon RDS
 
-b. DynamoDB(In depth)  ⭐
+### Developer Tools:
+	 AWS CodeArtifact
+	 AWS CodeBuild
+	 AWS CodeCommit
+	 AWS CodeDeploy
+	 Amazon CodeGuru
+	 AWS CodePipeline
+	 AWS CodeStar
+	 AWS Fault Injection Simulator
+	 AWS X-Ray
 
-c. RDS
+### Management and Governance:
+	 AWS CloudFormation
+	 Amazon CloudWatch
 
-d. Elastic cache
+### Networking and Content Delivery:
+	 Amazon API Gateway
+	 Amazon CloudFront
+	 Elastic Load Balancing
 
-e. EBS
+### Security, Identity, and Compliance:
+	 Amazon Cognito
+	 AWS Identity and Access Management (IAM)
+	 AWS Key Management Service (AWS KMS)
 
-f. EFS
+### Storage:
+	 Amazon S3
 
-## Deployment
-a. Cloudformation
-
-b. Codedeploy
-
-c. Deployment techniques and concepts (Bluegreen, rolling, all at once, etc.)
-
-## Security
-a. IAM ⭐
-
-b. KMS
-
-c. Secrets Manager
-
-## Networking and Content delivery
-a. VPC ⭐
-   1. [what-is-elastic-network-interface](https://github.com/MeSabya/AWS-Learning/blob/main/Network/5.%20Elastic%20Network%20Interface.md#what-is-elastic-network-interface)
-
-b. API gateway ⭐
-
-c. Route53 ⭐
-
-d. Cloudfront 
-
-
-
-## Event driving and streaming technology
-a. SNS/SQS  ⭐
-
-b. Kinesis
-
-## Monitoring
-Cloudwatch  ⭐
-
-
-## The AWS Fundamentals: 
-
-IAM, EC2, Load Balancing, Auto Scaling, EBS, Route 53, RDS, ElastiCache, S3
-
-## The AWS CLI: 
-
-CLI setup, usage on EC2, best practices, SDK, advanced usage
-
-## Properly deploy an application: 
-
-AWS Elastic Beanstalk, CICD, CodeCommit, CodePipeline, CodeBuild, CodeDeploy
-
-## Infrastructure as code 
-AWS CloudFormation
-
-## Monitoring, Troubleshooting & Audit: 
-AWS CloudWatch, X-Ray, CloudTrail
-
-## AWS Integration & Messaging: 
-SQS, SNS, Kinesis
-
-## AWS Serverless: 
-AWS Lambda, DynamoDB, API Gateway
-
-## ECS, ECR & Fargate: 
-Docker in AWS
-
-## AWS Security best practices: 
-KMS, Encryption SDK, SSM Parameter Store, IAM Policies
 
 
 ## Material
