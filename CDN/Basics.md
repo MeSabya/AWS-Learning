@@ -92,10 +92,10 @@ AWS WAF is a web application firewall that lets you monitor HTTP and HTTPS reque
 
 With AWS WAF, you can shield access to content based on conditions in a web access control list (web ACL) such as:
 
-- Origin IP address.
-- Values in query strings.
+- Origin IP address.- Values in query strings.
 
-CloudFront responds to requests with the requested content or an HTTP 403 status code (forbidden). CloudFront can also be configured to deliver a custom error page. 
+CloudFront responds 
+to requests with the requested content or an HTTP 403 status code (forbidden). CloudFront can also be configured to deliver a custom error page. 
 
 ### Security
 CloudFront is PCI DSS compliant, but it is not recommended to cache credit card information at edge locations. It is also HIPAA compliant as a HIPAA eligible service.
@@ -113,6 +113,10 @@ There are two options available for geo-restriction (geo-blocking):
 👉 Use the CloudFront geo-restriction feature (use for restricting access to all files in a distribution and at the country level).
 
 👉 Use a 3rd party geo-location service (use it for restricting access to a subset of the files in a distribution and for finer granularity at the country level).
+
+### Amazon CloudFront - Signed URLs, Cookies and OAI
+https://cloud.in28minutes.com/aws-certification-amazon-cloudfront-signed-urls-cookies-oai-s3
+
 
 ## Reference 
 https://kumargaurav1247.medium.com/aws-cdn-content-delivery-network-cloudfront-with-hands-on-e074b0e77166#:~:text=Amazon%20S3%20is%20designed%20for,close%20to%20users%20as%20possible.
