@@ -7,7 +7,12 @@ A better way to solve the web latency issues for very remote servers in the Inte
 ## AWS CloudFront:
 **CloudFront is the AWS CDN and it is a Global (not Regional) service**. 
 It consists of a global network of Edge Locations, that are distributed across the globe. It is complaint with both PCI DSS (except storing credit card information in the cache) and HIPAA standards.
-To deliver content to end users with lower latency, Amazon CloudFront uses a global network of 225+ Points of Presence (215+ Edge locations and 13 regional mid-tier caches) in 90 cities across 47 countries. (Updated — May 2021, Source: AWS Documentation) 
+To deliver content to end users with lower latency, Amazon CloudFront uses a global network of 225+ Points of Presence (215+ Edge locations and 13 regional mid-tier caches) in 90 cities across 47 countries. (Updated — May 2021, Source: AWS Documentation).
+
+👉 Amazon CloudFront is a content delivery network (CDN) service provided by Amazon Web Services (AWS). It is designed to accelerate the delivery of static and dynamic web content, such as images, videos, scripts, and 
+    other files, to end-users around the world.
+
+👉 CloudFront has a vast network of edge locations worldwide, strategically located in major cities. This allows it to distribute content closer to end-users, reducing latency and improving load times.
 
 ## What files should be served from a CDN
 
